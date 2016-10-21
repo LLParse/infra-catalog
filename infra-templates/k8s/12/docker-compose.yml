@@ -56,8 +56,8 @@ etcd:
     environment:
         RANCHER_DEBUG: 'true'
         EMBEDDED_BACKUPS: '${EMBEDDED_BACKUPS}'
-        BACKUP_PERIOD: '${BACKUP_PERIOD}'
-        BACKUP_RETENTION: '${BACKUP_RETENTION}'
+        BACKUP_PERIOD: '${BACKUP_PERIOD}m'
+        BACKUP_RETENTION: '${BACKUP_RETENTION}m'
     volumes:
     - etcd:/pdata
     - /var/etcd/backups:/data-backup
